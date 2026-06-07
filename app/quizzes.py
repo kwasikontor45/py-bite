@@ -1,3 +1,5 @@
+from .ooss_quiz import OOSS_QUIZ
+
 QUIZZES = {
     "ch1": {
         "title": "Chapter 1 Quiz: Python Basics",
@@ -248,7 +250,8 @@ QUIZZES = {
                 "explanation": "from math import sqrt brings only sqrt into the current namespace."
             }
         ]
-    }
+    },
+    **OOSS_QUIZ,
 }
 
 

@@ -1,3 +1,5 @@
+from .ooss_chapter import OOSS_CHAPTER
+
 CHAPTERS = [
     {
         "id": "ch1",
@@ -666,7 +668,8 @@ CHAPTERS = [
                 }
             }
         ]
-    }
+    },
+    OOSS_CHAPTER,
 ]
 
 
