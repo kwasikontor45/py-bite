@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/circadian.js') }}" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -22,6 +23,10 @@
             <div class="progress-mini">
                 <span id="global-progress-text">0% complete</span>
                 <div class="progress-bar-mini"><div id="global-progress-fill"></div></div>
+            </div>
+            <div class="phase-indicator" title="circadian phase">
+                <span id="phase-dot"></span>
+                <span id="phase-label"></span>
             </div>
         </div>
     </nav>

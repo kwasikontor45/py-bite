@@ -1,18 +1,54 @@
-/* ===== CSS Variables ===== */
+/* ===== CSS Variables — Rose Pine Moon × Phosphor Noir ===== */
+/* Circadian values are overridden at runtime by circadian.js   */
 :root {
-    --bg: #0f172a;
-    --surface: #1e293b;
-    --surface-light: #334155;
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --accent: #38bdf8;
-    --accent-dark: #0284c7;
-    --success: #22c55e;
-    --warning: #eab308;
-    --error: #ef4444;
-    --radius: 12px;
-    --shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -2px rgba(0,0,0,0.3);
+    /* phase defaults (night) — js overwrites on load */
+    --bg:           #191724;
+    --surface:      #1f1d2e;
+    --surface-light:#26233a;
+    --accent:       #c4a7e7;
+    --accent-dark:  #9c7dc7;
+    --accent-rgb:   196,167,231;
+    --accent-glow:  rgba(196,167,231,0.14);
+    --text-muted:   #6e6a86;
+
+    /* static rose pine moon */
+    --text:     #e0def4;
+    --subtle:   #908caa;
+    --success:  #9ccfd8;
+    --warning:  #f6c177;
+    --error:    #eb6f92;
+
+    --radius:     12px;
+    --shadow:     0 4px 6px -1px rgba(0,0,0,0.45), 0 2px 4px -2px rgba(0,0,0,0.35);
     --transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* smooth phase transitions */
+body,
+.navbar,
+.chapter-card,
+.lesson-card,
+.card,
+.code-block,
+pre,
+.quiz-question,
+.footer {
+    transition:
+        background-color 1.8s ease,
+        border-color 1.2s ease;
+}
+
+/* phosphor glow on code */
+pre, .code-block {
+    box-shadow: 0 0 18px var(--accent-glow), var(--shadow);
+}
+
+/* phosphor accent glow on focus/interactive */
+.btn-primary:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 12px var(--accent-glow);
 }
 
 /* ===== Reset & Base ===== */
@@ -95,6 +131,34 @@ a:hover {
 .nav-links a:hover {
     color: var(--text);
     text-decoration: none;
+}
+
+.phase-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.65;
+    transition: opacity var(--transition);
+}
+.phase-indicator:hover { opacity: 1; }
+
+#phase-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 7px rgba(var(--accent-rgb), 0.7);
+    flex-shrink: 0;
+    transition: background 1.8s ease, box-shadow 1.8s ease;
+}
+
+#phase-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 1.8s ease;
 }
 
 .progress-mini {
@@ -205,7 +269,7 @@ a:hover {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    background: linear-gradient(90deg, var(--accent), #818cf8);
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -300,7 +364,7 @@ a:hover {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent), #818cf8);
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
     border-radius: 4px;
     transition: width var(--transition);
 }
