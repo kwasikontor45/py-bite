@@ -1,0 +1,40 @@
+Ch6_l6 — arc-sec-audit lesson, append to ooss_chapter.py lessons list
+Ch6_l6 — arc-sec-audit lesson, append to ooss_chapter.py lessons list
+Now build the final clean file that's ready to copy-paste — the full updated ooss_chapter.py with ch6_l6 appended:
+
+
+Ran 2 commands
+Ran 2 commands
+ch6 isn't merged yet — so I'll give you one complete ooss_chapter.py with all 6 lessons, ready to drop in.
+
+
+Ran 5 commands, viewed 3 files, edited 2 files
+Ran 5 commands, viewed 3 files, edited 2 files
+Line 821 has unescaped quotes inside a double-quoted string. Fix it:
+
+
+Ran 2 commands
+Ran 2 commands
+Clean. Now verify ch6_l6 is in there and the lesson count is right:
+
+
+Verify lesson count and ids
+Verify lesson count and ids
+6 lessons, all good. Copy to outputs:
+
+
+Ran a command, read a file
+Ran a command, read a file
+Done. This replaces the previous ooss_chapter.py — same two-step deploy as before:
+
+python
+# app/content.py
+CHAPTERS = [...existing ch1–ch5..., OOSS_CHAPTER]
+Chapter 6 now has 6 lessons. The capstone (ch6_l6) covers:
+
+What arc-sec-audit does — the bash→python pattern map
+Auditor base class — OOP with counters, runnable in the browser
+pathlib perms — pure Python, no subprocess, runs in sandbox
+re instead of grep — simulated config parsing, runs in sandbox
+subprocess bridge — shown as reference, flagged as local-only
+Exercise builds a mini auditor from scratch — check_shadow_perm() + check_root_login() — everything runnable in py-bite's sandbox without needing a real Linux environment.
