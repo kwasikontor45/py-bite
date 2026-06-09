@@ -142,9 +142,19 @@ a:hover {
 }
 .phase-indicator:hover { opacity: 1; }
 
+
+.logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 @keyframes phase-pulse {
-    0%, 100% { box-shadow: 0 0 4px rgba(var(--accent-rgb), 0.35); }
-    50%       { box-shadow: 0 0 11px rgba(var(--accent-rgb), 0.85); }
+    0%, 100% { box-shadow: 0 0 3px rgba(var(--accent-rgb), 0.5); opacity: 0.7; }
+    50%       { box-shadow: 0 0 9px rgba(var(--accent-rgb), 1.0); opacity: 1.0; }
 }
 
 #phase-dot {

@@ -11,7 +11,7 @@ const PHASES = {
     accentDark: '#c47a77',
     accentRgb:  '234,154,151',
     muted:      '#6e6a86',
-    label:      '🖤 hidden-heart',
+    label:      'hidden-heart 🖤',
   },
   day: {
     range:  [11, 17],
@@ -22,7 +22,7 @@ const PHASES = {
     accentDark: '#6eadb6',
     accentRgb:  '156,207,216',
     muted:      '#908caa',
-    label:      '🧩 choice',
+    label:      'choice 🧩',
   },
   dusk: {
     range:  [17, 21],
@@ -33,7 +33,7 @@ const PHASES = {
     accentDark: '#d4a356',
     accentRgb:  '246,193,119',
     muted:      '#908caa',
-    label:      '☠️ desire',
+    label:      'desire ☠️',
   },
   night: {
     range:  [21, 29],  // 21–04 (hours <5 get +24)
@@ -44,7 +44,7 @@ const PHASES = {
     accentDark: '#9c7dc7',
     accentRgb:  '196,167,231',
     muted:      '#6e6a86',
-    label:      '🌕 still-pine',
+    label:      'still-pine <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAACyElEQVR4nG2TyW8cRRhHX1VXV/f0zPRsnoUEBodFijFMYhaJAygh4saFC4fwb0XiyN/AkQNHhACDkJDBCcQyNjGeGc+eWXqt4pAQQsR3f0/6Sd8TgOWZc4SgVQioeB6+1izzjOPxhNwaAMRTkHhW0Ks3uNm9QicI0FJSrYQUiiXOlw/56vg+Xx4e/gdU/4BaSj68/AK7tRqdUhlPe1zMJxhH0bCS3nOXeH9nh2vNNne++Zp1liEAJR4L3mt36G1tIZFM1yt0EmMRTKcTiq7LMokJpOSTN98mjmPu7H+HsRZpgav1Or1Gi8Vmg5CC3OQ4UoKxNKpVarUaeZqxns2ZpSmf3viAWy+/irUWKYXg9UoNYXJ818UYgyMk0oCnXDpbTWphiK80g/6QXw/voj3Nx73rjybUPY+m9vG1R2oyHCkpKM0r29sMRmMqxTJhUESGZQpFn53OdTzPoxsW6QQBKvR86pUQB4g3OWluKCjLg0Gf1XrD5O6US602aZrR6+3SaG+xvBiRbyLaYQUlsBSUIopTmuUyucnJjGW2eEjB1cR5zi+//0a1XCFexUxOz1jM56QG8tygplHEdLWhVSqhtQZhiaIEpIPnagLfB+CdvbdwlWQ8nnB8esJ4sWC0WqJmScLGGlxHEhmDyA0l30fYR48S+D6tZhNpDEkSM51POBtccJHGDKM1yljLj6MB73Zf5GQ4xPd8qtUKxaCIgyROEh70zzkfDJjHG7IspRmGfHFwRG4sSgjBD/1zDhYzbr22S2QNjpS4rotX8BkPR/haM17MuXd6wkvNDsfRmoPpBAFIgMwYPvv+W+5lEXt71+hefh4lBDbLUK6DkAKM4Y3uNlEp4POff8JY+28TTxd1+8ZNPrq6SyVO0NIhyVKO/jxj/48j7kdr9vt/Yax9EtMTVgiBfWxVjsOVeoOSdBBCMt6sOJ3P/jfhvwHSDzv+RE4/JQAAAABJRU5ErkJggg==" style="width:14px;height:14px;border-radius:50%;vertical-align:middle;margin-left:3px;opacity:0.9;">',  
   },
 }
 
@@ -74,7 +74,7 @@ function apply(phase) {
     dot.style.background  = phase.accent
     dot.style.boxShadow   = `0 0 7px rgba(${phase.accentRgb}, 0.7)`
   }
-  if (label) label.textContent = phase.label
+  if (label) label.innerHTML = phase.label
 }
 
 function tick() {
