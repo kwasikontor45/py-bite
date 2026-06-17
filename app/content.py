@@ -1,4 +1,5 @@
 from .ooss_chapter import OOSS_CHAPTER
+from .network_automation_chapter import NETWORK_AUTOMATION_CHAPTER
 
 CHAPTERS = [
     {
@@ -670,6 +671,7 @@ CHAPTERS = [
         ]
     },
     OOSS_CHAPTER,
+    NETWORK_AUTOMATION_CHAPTER,
 ]
 
 

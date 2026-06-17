@@ -1,4 +1,5 @@
 from .ooss_quiz import OOSS_QUIZ
+from .network_automation_quiz import NETWORK_AUTOMATION_QUIZ
 
 QUIZZES = {
     "ch1": {
@@ -252,6 +253,7 @@ QUIZZES = {
         ]
     },
     **OOSS_QUIZ,
+    **NETWORK_AUTOMATION_QUIZ,
 }
 
 
