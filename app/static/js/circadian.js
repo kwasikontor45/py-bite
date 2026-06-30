@@ -11,7 +11,7 @@ const PHASES = {
     accentDark: '#c47a77',
     accentRgb:  '234,154,151',
     muted:      '#6e6a86',
-    label:      'rose-pine-rose',
+    label:      'nyx',
   },
   ocean: {
     range:      [11, 17],
@@ -22,7 +22,7 @@ const PHASES = {
     accentDark: '#3aa8cc',
     accentRgb:  '94,200,237',
     muted:      '#3d6a80',
-    label:      'midnight-ocean',
+    label:      'choice',
   },
   gold: {
     range:      [17, 21],
@@ -33,7 +33,7 @@ const PHASES = {
     accentDark: '#d4a356',
     accentRgb:  '246,193,119',
     muted:      '#908caa',
-    label:      'rose-pine-gold',
+    label:      'desire',
   },
   iris: {
     range:      [21, 29],  // 21–04 (hours <5 get +24)
@@ -44,7 +44,7 @@ const PHASES = {
     accentDark: '#9c7dc7',
     accentRgb:  '196,167,231',
     muted:      '#6e6a86',
-    label:      'rose-pine-iris',
+    label:      'still-pine',
   },
 }
 
