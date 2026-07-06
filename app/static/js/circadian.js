@@ -3,7 +3,7 @@
 
 const PHASES = {
   rose: {
-    range:      [5, 11],
+    range:      [21, 30],  // 21–06 (hours <6 get +24)
     bg:         '#1a1826',
     surface:    '#232136',
     overlay:    '#2a273f',
@@ -14,7 +14,7 @@ const PHASES = {
     label:      'nyx',
   },
   ocean: {
-    range:      [11, 17],
+    range:      [6, 11],
     bg:         '#090f1a',
     surface:    '#0f1926',
     overlay:    '#162233',
@@ -25,7 +25,7 @@ const PHASES = {
     label:      'choice',
   },
   gold: {
-    range:      [17, 21],
+    range:      [11, 17],
     bg:         '#1f1d2e',
     surface:    '#26233a',
     overlay:    '#312e4a',
@@ -36,7 +36,7 @@ const PHASES = {
     label:      'desire',
   },
   iris: {
-    range:      [21, 29],  // 21–04 (hours <5 get +24)
+    range:      [17, 21],
     bg:         '#191724',
     surface:    '#1f1d2e',
     overlay:    '#26233a',
@@ -49,7 +49,7 @@ const PHASES = {
 }
 
 function getPhase(h) {
-  const hour = h < 5 ? h + 24 : h
+  const hour = h < 6 ? h + 24 : h
   for (const [name, p] of Object.entries(PHASES)) {
     if (hour >= p.range[0] && hour < p.range[1]) return { name, ...p }
   }
