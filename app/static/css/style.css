@@ -149,8 +149,8 @@ a:hover {
     text-shadow: 0 0 6px rgba(var(--accent-rgb), 0.45);
     transition: color 1.8s ease, text-shadow 1.8s ease;
 }
-.mercury-glyph:first-of-type { animation: flow 2.4s ease-in-out infinite; }
-.mercury-glyph:last-of-type  { animation: flow-delay 2.4s ease-in-out infinite; margin-right: 4px; }
+.mercury-glyph--out  { animation: flow 2.4s ease-in-out infinite; }
+.mercury-glyph--back { animation: flow-delay 2.4s ease-in-out infinite; margin-right: 4px; }
 
 @keyframes flow {
     0%   { opacity:0.2; transform:translateY(2px) scale(0.98); }
