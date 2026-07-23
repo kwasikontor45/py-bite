@@ -11,8 +11,8 @@
     --accent-glow:  rgba(196,167,231,0.14);
     --text-muted:   #6e6a86;
 
-    /* the mercury bead between the glyphs — deliberately fixed, not phase-linked,
-       so it always reads as a distinct color from whichever accent the glyphs are */
+    /* the mercury bead between the glyphs — phase-linked via circadian.js,
+       fallback values below only apply before JS runs on first paint */
     --mercury-dot:     #e8e8f0;
     --mercury-dot-rgb: 232,232,240;
 

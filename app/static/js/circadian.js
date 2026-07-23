@@ -68,9 +68,11 @@ function apply(phase) {
   r.style.setProperty('--text-muted',   phase.muted)
   r.dataset.phase = phase.name
 
-  // phase-dot is deliberately NOT set here anymore — it's a fixed mercury-silver
-  // color (--mercury-dot in style.css) so it always reads distinct from the
-  // phase-tinted ☿⚕ glyphs on either side of it, not another phase indicator.
+  // phase-dot now tracks the circadian phase like everything else instead of
+  // staying a fixed mercury-silver — cycles through all four phase colors.
+  r.style.setProperty('--mercury-dot',     phase.accent)
+  r.style.setProperty('--mercury-dot-rgb', phase.accentRgb)
+
   const label = document.getElementById('phase-label')
   if (label) {
     label.textContent = phase.label
