@@ -213,7 +213,8 @@ a:hover {
     box-shadow: 0 0 7px rgba(var(--mercury-dot-rgb), 0.7);
     flex-shrink: 0;
     margin: 0 2px;
-    animation: phase-pulse 3s ease-in-out infinite;
+    transition: background-color 1.8s ease, box-shadow 1.8s ease;
+    animation: phase-pulse 16s ease-in-out infinite;
 }
 
 #phase-label {
